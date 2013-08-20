@@ -1,9 +1,12 @@
 {
   "cmd": "sh '${packages}/CompassBuild/build.sh' ${file_path} ${project_path};",
-	"working_dir": "$packages/CompassBuild",
-	"selector": "source.sass, source.scss",
-	"shell": "true",
+  "working_dir": "$packages/CompassBuild",
+  "selector": "source.sass, source.scss",
+  "shell": "true",
   "osx": {
     "path": "/usr/local/bin:$PATH"
+  },
+  "windows": {
+    "cmd": ["build.cmd", "${file_path}"]
   }
 }
