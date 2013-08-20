@@ -3,17 +3,21 @@ x=$1;
 y=${2-/};
 COMPASS=`which compass`;
 
+if [[ -z "$COMPASS" ]]; then
+  echo "[ERROR] compass not found. Make sure it exists in your PATH.";
+  exit;
+fi
+
 while [ "$x" != "$y" ];
   do x=`dirname "$x"`;
-# echo $x;
 
   if [ `find "$x" -maxdepth 1 -name config.rb` ]; then
     $COMPASS compile "$x" --boring;
-    DONE=1;
+    FOUND=1;
     break;
   fi;
 done
 
-if [[ -z "$DONE" ]]; then
-  echo "[ERROR] config.rb not found.";
+if [[ -z "$FOUND" ]]; then
+  echo "[ERROR] Build did not run because config.rb cannot be found.";
 fi
