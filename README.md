@@ -1,17 +1,19 @@
-Compass Build System for Sublime Text
-=====================================
+Compass build for Sublime Text
+==============================
 
-This is a Build System for Compass Watch when opening SASS Files.
+This is a Build System for Compass SASS Files. It locates the file config.rb in
+your project and executes compass compile in that folder. 
 
 
 Requirements
 ------------
 
-* Compass
+* Compass installed via RubyGems
+* A Sublime Text project set up containing a Compass project
 
 
-Install
--------
+Installation
+------------
 
 This is only available via Git at the moment.
 
@@ -22,11 +24,19 @@ This is only available via Git at the moment.
 3. Restart Sublime Text
 
 
-Build
+Usage
 -----
 
 The build system automatically triggers when running on any .sass or .scss file.
-To run the build system press `Cmd` + `B` or select `Tools -> Build` from the menu.
+To run the build system press `Cmd` + `B` or select `Tools -> Build` from the 
+menu.
 
 If there are multiple Build Systems installed to build SASS files you might need
 to set the Build System to 'CompassBuild' manually.
+
+
+Bugs
+----
+
+This project has been tested on a Mac OS 10.7 and on Windows 7 running Sublime 
+Text 2. If you find any bugs please open an issue.
