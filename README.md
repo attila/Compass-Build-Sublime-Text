@@ -1,6 +1,9 @@
 Compass build for Sublime Text
 ==============================
 
+> This project is now DEPRECATED in favour of [Sublime-Text-2-Compass-Build-System](https://github.com/whatwedo/Sublime-Text-2-Compass-Build-System).
+> Please use that package for building your Compass project with Sublime Text 2/3.
+
 This is a Build System for Compass SASS Files. It locates the file config.rb in
 your project and executes compass compile in that folder. 
 
